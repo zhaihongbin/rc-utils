@@ -1,0 +1,19 @@
+{
+  "name": "rc-utils",
+  "version": "1.0.0",
+  "description": "收集整理的react相关工具函数",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhaihongbin/rc-utils.git"
+  },
+  "author": "zhaihongbin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhaihongbin/rc-utils/issues"
+  },
+  "homepage": "https://github.com/zhaihongbin/rc-utils#readme"
+}
