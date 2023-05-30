@@ -37,6 +37,24 @@ function buildCJS() {
     .pipe(gulp.dest('lib/cjs/'));
 }
 
+function buildDeclaration() {
+  const tsProject = ts({
+    ...tsconfig.compilerOptions,
+    paths: {
+      ...tsconfig.compilerOptions.paths,
+      'react': ['node_modules/@types/react'],
+    },
+    module: 'ES6',
+    declaration: true,
+    emitDeclarationOnly: true,
+  });
+  return gulp
+    .src(['src/**/*.{ts,tsx}'])
+    .pipe(tsProject)
+    .pipe(gulp.dest('lib/es/'))
+    .pipe(gulp.dest('lib/cjs/'));
+}
+
 function generatePackageJSON() {
   return gulp
     .src('./package.json')
@@ -63,5 +81,6 @@ exports.default = gulp.series(
   clean,
   buildES,
   buildCJS,
+  buildDeclaration,
   generatePackageJSON
 );
