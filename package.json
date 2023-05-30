@@ -1,5 +1,5 @@
 {
-  "name": "rc-utils",
+  "name": "@zhaihongbin/rc-utils",
   "version": "0.0.1-alpha.1",
   "description": "收集整理的react相关工具函数",
   "main": "./cjs/index.js",
