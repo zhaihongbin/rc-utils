@@ -8,9 +8,9 @@
     "postinstall": "husky install",
     "lint": "eslint .",
     "build": "gulp",
-    "pub": "npm publish ./lib",
-    "pub:alpha": "npm publish ./lib --tag alpha",
-    "pub:dev": "npm publish ./lib --tag dev"
+    "pub": "npm publish ./lib --access public",
+    "pub:alpha": "npm publish ./lib --tag alpha --access public",
+    "pub:dev": "npm publish ./lib --tag dev --access public"
   },
   "repository": {
     "type": "git",
@@ -51,7 +51,6 @@
     "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org",
-    "access": "public"
+    "registry": "https://registry.npmjs.org"
   }
 }
